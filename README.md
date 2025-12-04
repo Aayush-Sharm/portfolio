@@ -2,11 +2,8 @@
 
 This is my personal portfolio website built using **Next.js**, **React**, and **Styled Components**.  
 It showcases my projects, skills, and experience in a modern and responsive design.
-[Portfolio Website](https://i.ibb.co/WgPMpts/image.png)
 
 ## 🚀 Live Demo
-👉 *(Add your Netlify or GitHub Pages link here)*
-
 --- Netlify : https://aayu-portfolio-site.netlify.app/
 --- Github: 
 
