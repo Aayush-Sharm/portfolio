@@ -5,7 +5,7 @@ It showcases my projects, skills, and experience in a modern and responsive desi
 
 ## 🚀 Live Demo
 --- Netlify : https://aayu-portfolio-site.netlify.app/
---- Github: 
+--- Github: https://github.com/Aayush-Sharm/portfolio
 
 ## ✨ Features
 - Modern, clean, and responsive design  
