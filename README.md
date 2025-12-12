@@ -95,7 +95,7 @@ README.md
 
 Clone the repository:
 
-git clone <your-repo-url>
+git clone <https://github.com/Aayush-Sharm/portfolio>
 
 
 Navigate to the folder:
