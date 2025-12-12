@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aayush Sharma - Portfolio</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;color:#fff}
+    body{background:#000;overflow-x:hidden;position:relative}
+    html{scroll-behavior:smooth}
+
+    /* Updated canvas fix */
+    #canvas-bg{
+        position:fixed;
+        top:0;left:0;
+        width:100%;height:100%;
+        z-index:-9999;
+        pointer-events:none;
+        background:#000;
+    }
+
+    nav{position:fixed;top:0;width:100%;padding:18px 40px;display:flex;justify-content:flex-end;gap:40px;background:rgba(0,0,0,0.4);backdrop-filter:blur(10px);border-bottom:1px solid rgba(0,200,255,0.2);z-index:999}
+    nav a{color:#00d4ff;text-decoration:none;font-size:1.1rem;transition:.3s}
+    nav a:hover{color:#fff}
+
+    header{text-align:center;padding:150px 20px 90px}
+    header img{width:180px;height:180px;border-radius:50%;border:4px solid #00d4ff;box-shadow:0 0 25px #00d4ff}
+    header h1{font-size:3.4rem;margin-top:20px}
+    header p{opacity:.85;font-size:1.3rem;margin-top:5px}
+
+    .hero-buttons{margin-top:30px;display:flex;justify-content:center;gap:20px}
+    .btn{padding:12px 25px;border-radius:8px;font-size:1.1rem;text-decoration:none;border:1px solid #00d4ff;transition:.3s}
+    .btn:hover{background:#00d4ff;color:#000}
+
+    section{width:90%;max-width:1200px;margin:auto;padding:90px 20px}
+    h2{text-align:center;font-size:2.7rem;margin-bottom:40px;color:#00d4ff}
+
+    .skills-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:20px}
+    .skill{background:rgba(255,255,255,0.06);padding:20px;text-align:center;border-radius:12px;font-size:1.1rem;border:1px solid rgba(255,255,255,0.15);transition:.3s}
+    .skill:hover{background:rgba(255,255,255,0.15);transform:translateY(-6px)}
+
+    .project-card{background:rgba(255,255,255,0.07);padding:30px;margin:25px 0;border-radius:14px;border:1px solid rgba(255,255,255,0.12);transition:.3s}
+    .project-card:hover{transform:translateY(-6px);background:rgba(255,255,255,0.12)}
+    .project-card img{width:100%;border-radius:10px;margin-bottom:15px}
+    .project-card a{color:#00d4ff;font-size:1.1rem}
+
+    footer{text-align:center;padding:25px;opacity:.6;margin-top:40px}
+
+    .reveal{opacity:0;transform:translateY(40px);transition:1s}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+
+    input, textarea {
+        background: #fff;
+        color: #000 !important;
+    }
+  </style>
+</head>
+<body>
+
+<canvas id="canvas-bg"></canvas>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<header id="home" class="reveal">
+  <img src="./src/photo.jpeg" alt="Profile" />
+  <h1>Aayush Sharma</h1>
+  <p>Full Stack Developer • Python • JavaScript • UI/UX • Automation</p>
+  <div class="hero-buttons">
+    <a class="btn" href="./src/Aayush_Resume.pdf" target="_blank">Download Resume</a>
+    <a class="btn" href="#contact">Hire Me</a>
+  </div>
+</header>
+
+<section id="skills" class="reveal">
+  <h2>Professional Skills</h2>
+  <div class="skills-container">
+    <div class="skill">HTML5</div>
+    <div class="skill">CSS / Tailwind</div>
+    <div class="skill">JavaScript</div>
+    <div class="skill">Python</div>
+    <div class="skill">React.js</div>
+    <div class="skill">Node.js</div>
+    <div class="skill">MySQL</div>
+    <div class="skill">UI/UX Design</div>
+    <div class="skill">API Integration</div>
+  </div>
+</section>
+
+<section id="projects" class="reveal">
+  <h2>My Projects</h2>
+
+  <div class="project-card">
+    <img src="./src/gaurder.PNG ">
+    <h3>Guards Security Website</h3>
+    <a href="https://guards.netlify.app/" target="_blank">Visit Project →</a>
+  </div>
+
+  <div class="project-card">
+    <img src="./src/weilding.PNG">
+    <h3>Welding Website</h3>
+    <a href="https://weilding.netlify.app/" target="_blank">Visit Project →</a>
+  </div>
+
+  <div class="project-card">
+    <img src="./src/Hexashop.PNG">
+    <h3>HexaShope E-Commerce</h3>
+    <a href="https://hexashopecom.netlify.app/" target="_blank">Visit Project →</a>
+  </div>
+</section>
+
+<section id="contact" class="reveal">
+  <h2>Contact Me</h2>
+  <form action="https://formspree.io/f/mgejowqp" method="POST" style="text-align:center">
+    <input name="name" placeholder="Your Name" required style="padding:12px;width:60%;margin:10px;border-radius:8px;border:none;"><br>
+    <input name="email" placeholder="Your Email" required style="padding:12px;width:60%;margin:10px;border-radius:8px;border:none;"><br>
+    <textarea name="message" placeholder="Your Message" required style="padding:12px;width:60%;height:130px;margin:10px;border-radius:8px;border:none;"></textarea><br>
+    <button class="btn" type="submit">Send Message</button>
+  </form>
+</section>
+
+<footer>© 2025 Aayush Sharma. All Rights Reserved.</footer>
+
+<script>
+// Reveal on scroll using IntersectionObserver
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, { threshold: 0.1 });
+
+reveals.forEach(el => observer.observe(el));
+
+// Optimized Particle Background
+const c=document.getElementById('canvas-bg'),x=c.getContext('2d');let w,h;
+function resize(){w=c.width=innerWidth;h=c.height=innerHeight}
+resize();window.onresize=resize;
+
+// Reduced particles: 35
+let particles=Array.from({length:35},()=>({x:Math.random()*w,y:Math.random()*h,z:Math.random()*3+1}));
+
+function draw(){
+  x.fillStyle='#000';
+  x.fillRect(0,0,w,h);
+  particles.forEach(p=>{
+    x.beginPath();
+    x.fillStyle='rgba(0,220,255,.7)';
+    x.arc(p.x,p.y,p.z,0,Math.PI*2);
+    x.fill();
+    p.y+=p.z*0.6;
+    if(p.y>h)p.y=0;
+  });
+  setTimeout(()=>requestAnimationFrame(draw),30); // throttled FPS
+}
+draw();
+</script>
+
+</body>
+</html>
